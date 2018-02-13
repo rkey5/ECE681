@@ -7,7 +7,13 @@ num_trials = 10000;
 for z = 1:num_trials
     not_diff = 0; 
     X = randi(2,D, P+Q)-1;
-    Y = [1 0 1 0 1 0 1 0 1 0];
+    %manually typed in so Q 1's and P 0's
+    for a = 1:Q
+        Y(a) = 1; 
+    end
+    for b = 1:P
+        Y(a+b) = 0; 
+    end
     p = 1;
     q = 1;
     for i = 1:P+Q
